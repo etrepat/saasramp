@@ -1,5 +1,5 @@
 # monkeypatch the gateway
-include ActiveMerchant::Billing
+#include ActiveMerchant::Billing
 
 class BraintreeResponse < ActiveMerchant::Billing::Response
   def token
@@ -14,3 +14,4 @@ rescue NameError
   # 1.4.2
   ActiveMerchant::Billing::BraintreeGateway::Response = BraintreeResponse
 end
+
